@@ -1,9 +1,9 @@
 #BlueJ package file
-dependency1.from=IHMListe2
-dependency1.to=Chapitre2CoreJava2
+dependency1.from=IHMListeTest
+dependency1.to=IHMListe
 dependency1.type=UsesDependency
-dependency2.from=IHMListeTest
-dependency2.to=IHMListe
+dependency2.from=IHMListe2
+dependency2.to=Chapitre2CoreJava2
 dependency2.type=UsesDependency
 objectbench.height=85
 objectbench.width=451

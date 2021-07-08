@@ -162,3 +162,52 @@ public class IHMListe2 extends JPanel implements ActionListener, ItemListener {
         
     }
 }  
+
+class Originator {
+    private List<String> state;
+
+    public void set(List<String> state) {
+
+        this.state = state;
+    }
+
+    public Memento saveToMemento() {
+        System.out.println("Originator: Saving to Memento.");
+        return new Memento(this.state);
+    }
+
+    public List<String> restoreFromMemento(Memento memento) {
+        this.state = memento.getSave();
+        return state;
+    }
+}
+class Memento {
+    private final List<String> sit;
+
+    public Memento(List<String> save) {
+        sit = save;
+    }
+
+    public List<String> getSave() {
+        return sit;
+    }
+}
+class Caretaker {
+    private Stack<Memento> save = new Stack<Memento>();
+
+    public void addMemento(Memento m) {
+        save.push(m);
+    }
+
+    public Memento getMemento() {
+        return save.pop();
+    }
+
+    public Memento seeMemento() {
+        return save.peek();
+    }
+
+    public boolean isEmpty(){
+        return save.empty();
+    }
+}
