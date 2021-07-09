@@ -172,7 +172,7 @@ class Originator {
     }
 
     public Memento saveToMemento() {
-        System.out.println("Originator: Saving to Memento.");
+        System.out.println(" Saving");
         return new Memento(this.state);
     }
 
@@ -201,13 +201,4 @@ class Caretaker {
 
     public Memento getMemento() {
         return save.pop();
-    }
-
-    public Memento seeMemento() {
-        return save.peek();
-    }
-
-    public boolean isEmpty(){
-        return save.empty();
-    }
-}
+    }}
